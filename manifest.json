@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pull Request Blocker",
+  "description": "This extension do not allow you to do a pull request to master on Bitbucket",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["https://bitbucket.org/*"],
+      "js": ["jquery.js", "pull_requests.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "https://bitbucket.org/*"
+  ]
+}
